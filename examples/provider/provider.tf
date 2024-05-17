@@ -1,3 +1,10 @@
-provider "scaffolding" {
-  # example configuration here
+provider "wellknownoidc" {
+}
+
+terraform {
+  required_providers {
+    wellknownoidc = {
+      source = "registry.terraform.io/alex-ikse/wellknownoidc"
+    }
+  }
 }

@@ -17,7 +17,7 @@ func TestAccJWKSDataSource(t *testing.T) {
 		Steps: []resource.TestStep{
 			// Read testing
 			{
-				Config: providerConfig + fmt.Sprintf(testAccJWKSDataSourceConfig, issuer),
+				Config: fmt.Sprintf(testAccJWKSDataSourceConfig, issuer),
 				Check: resource.ComposeAggregateTestCheckFunc(
 					resource.TestCheckResourceAttr("data.wellknownoidc_jwks.test", "keys.#", "2"),
 				),

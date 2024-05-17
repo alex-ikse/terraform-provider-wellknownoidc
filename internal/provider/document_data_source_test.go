@@ -17,7 +17,7 @@ func TestAccDocumentDataSource(t *testing.T) {
 		Steps: []resource.TestStep{
 			// Read testing
 			{
-				Config: providerConfig + fmt.Sprintf(testAccDocumentDataSourceConfig, issuer),
+				Config: fmt.Sprintf(testAccDocumentDataSourceConfig, issuer),
 				Check: resource.ComposeAggregateTestCheckFunc(
 					resource.TestCheckResourceAttr("data.wellknownoidc_document.test", "id", issuer),
 				),

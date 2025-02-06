@@ -9,7 +9,6 @@ linters:
   enable:
     - durationcheck
     - errcheck
-    - exportloopref
     - forcetypeassert
     - godot
     - gofmt
@@ -24,4 +23,7 @@ linters:
     - unconvert
     - unparam
     - unused
-    - vet
+    - govet
+
+output:
+  formats: colored-line-number
